@@ -1,9 +1,26 @@
-"use strict";
-const express = require("express");
+'use strict';
+require('dotenv').config();
+const express = require('express');
 const app = express();
+const path = require('path');
+const morgan = require('morgan');
 
-app.use(express.static(__dirname + "/public/"));
+// Public
+const port = process.env.SERVER_PORT || 3001;
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen("3000", function () {
-  console.log("Servidor web escuchando en el puerto 3000");
+// Save Json
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: false }));
+
+// Router
+app.use('', require('./routes/index'));
+
+// Error 404
+app.use((req, res, next) => {
+  res.status(404).send('404 Not found in my server');
+});
+
+app.listen(port, () => {
+  console.log(`Servidor web escuchando en el puerto ${port}`);
 });
