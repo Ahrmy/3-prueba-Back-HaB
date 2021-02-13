@@ -1,0 +1,19 @@
+{
+  "name": "server-ahrmy",
+  "version": "1.0.0",
+  "description": "Creación de servidor pra prueba de Hack a Boss JSB08CO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahrmy/3-prueba-Back-HaB.git"
+  },
+  "author": "Ibrahim Armando Numa Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahrmy/3-prueba-Back-HaB/issues"
+  },
+  "homepage": "https://github.com/Ahrmy/3-prueba-Back-HaB#readme"
+}
