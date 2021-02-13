@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ahrmy/3-prueba-Back-HaB/issues"
   },
-  "homepage": "https://github.com/Ahrmy/3-prueba-Back-HaB#readme"
+  "homepage": "https://github.com/Ahrmy/3-prueba-Back-HaB#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
