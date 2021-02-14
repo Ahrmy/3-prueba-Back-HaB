@@ -45,4 +45,17 @@ async function readGotHousesById(req, res) {
     jsonError(error, res);
   }
 }
-module.exports = { readGotCharacters, readGotHouses, readGotCharactersById, readGotHousesById };
+
+async function findGotCharacters(req, res) {
+  try {
+    const { key, value } = req.params;
+    console.log(key, value);
+    const url = `https://anapioficeandfire.com/api/characters?${key}=${value}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return res.send(data);
+  } catch (error) {
+    jsonError(error, res);
+  }
+}
+module.exports = { readGotCharacters, readGotHouses, readGotCharactersById, readGotHousesById, findGotCharacters };
